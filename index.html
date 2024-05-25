@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ToDo App</h1>
+      <input type="text" id="taskTitle" placeholder="Titel eingeben..." />
+      <textarea
+        id="taskDescription"
+        rows="4"
+        placeholder="Aufgabe eingeben..."
+      ></textarea>
+      <button id="actionBtn" onclick="performAction()">Hinzufügen</button>
+      <button id="resetBtn" onclick="resetFields()" style="display: none">
+        Neu
+      </button>
+      <button id="killBtn" onclick="deleteCard(this)" style="display: none">
+        Löschen
+      </button>
+      <br />
+      <br />
+      <input
+        type="text"
+        id="searchInput"
+        oninput="searchTasks()"
+        placeholder="Suche nach Karten..."
+      />
+    </div>
+    <div class="cards" id="taskCards"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
