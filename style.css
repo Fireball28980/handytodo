@@ -70,6 +70,10 @@ button {
   text-align: left;
   cursor: pointer;
 }
+.cardTitle {
+  font-size: large;
+  font-weight: 700;
+}
 
 .delete-btn {
   position: absolute;

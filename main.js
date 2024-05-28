@@ -144,16 +144,16 @@ function updateTask(card) {
 // Karte löschen...
 function deleteCard() {
   console.log("Kill-Button wurde geklickt");
-  let card = document.querySelector(".card.checked"); // Zugriff auf die ausgewählte Karte, die gerade bearbeitet wird
+  let card = document.querySelector(".card.active"); // Zugriff auf die momentan angezeigte Karte
   let taskCards = document.getElementById("taskCards");
   if (card) {
     taskCards.removeChild(card); // Entferne die Karte aus dem DOM
     saveTasks(); // Aktualisiere den Local Storage
+    clearFields(); // Leere die Eingabefelder
   } else {
     console.error("Es wurde keine ausgewählte Karte gefunden.");
   }
 }
-
 // gibt es die Karte schon...
 function isDuplicate(title, description) {
   let taskCards = document
